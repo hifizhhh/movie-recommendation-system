@@ -20,7 +20,7 @@ A movie recommendation system built using collaborative filtering and content-ba
   - [Content-Based Filtering](#content-based-filtering)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#license)
+- [License](#LICENSE)
 
 ---
 
