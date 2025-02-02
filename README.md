@@ -20,7 +20,7 @@ A movie recommendation system built using collaborative filtering and content-ba
   - [Content-Based Filtering](#content-based-filtering)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#LICENSE)
+- [License](#license)
 
 ---
 
@@ -56,5 +56,88 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/hifizhhh/movie-recommendation-system.git
+   git clone https://github.com/your-username/movie-recommendation-system.git
    cd movie-recommendation-system
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Download the MovieLens dataset and place the `movies.csv` and `ratings.csv` files in the `data/` directory.
+
+---
+
+## Usage
+
+1. **Collaborative Filtering**:
+   - To recommend movies for a specific user (e.g., user ID 1):
+     ```python
+     print(recommend_movie(1))
+     ```
+
+2. **Content-Based Filtering**:
+   - To recommend movies similar to a given movie (e.g., "Toy Story (1995)"):
+     ```python
+     print(recommend_movies_by_title("Toy Story (1995)"))
+     ```
+
+3. **Visualization**:
+   - To visualize the distribution of movie ratings:
+     ```python
+     plt.figure(figsize=(8, 6))
+     sns.countplot(x="rating", data=ratings, palette="viridis")
+     plt.title("Distribution of Movie Ratings")
+     plt.xlabel("Rating")
+     plt.ylabel("Count")
+     plt.show()
+     ```
+
+---
+
+## Methods
+
+### Collaborative Filtering
+- **User-Item Matrix**: A pivot table is created to map users to movies and their ratings.
+- **Cosine Similarity**: Used to calculate similarity between users based on their ratings.
+- **Recommendation**: Movies are recommended based on the average ratings of similar users.
+
+### Content-Based Filtering
+- **TF-IDF Vectorization**: Converts movie genres into a numerical representation.
+- **Cosine Similarity**: Used to calculate similarity between movies based on their genres.
+- **Recommendation**: Movies are recommended based on genre similarity.
+
+---
+
+## Results
+
+- **Collaborative Filtering**: Provides personalized recommendations for users.
+- **Content-Based Filtering**: Recommends movies with similar genres to a given movie.
+- **Visualization**: Insights into the distribution of movie ratings.
+
+---
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeatureName`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeatureName`).
+5. Open a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- [MovieLens Dataset](https://grouplens.org/datasets/movielens/) for providing the data.
+- [Scikit-learn](https://scikit-learn.org/) and [Pandas](https://pandas.pydata.org/) for making data analysis and machine learning easier.
+
+---
